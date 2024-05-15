@@ -12,7 +12,11 @@ app.get("/", function (req, res) {
 
 app.get("/perguntar", function (req, res) {
     res.render("perguntar");
-})
+});
+
+app.get("/salvarpergunta", (req, res) => {
+  
+});
 
 app.listen(3000, () => {
   console.log("Servidor rodando na porta 3000!");
