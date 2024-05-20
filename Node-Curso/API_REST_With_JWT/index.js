@@ -74,7 +74,7 @@ var DB = {
 
 app.get("/games", auth, (req, res) => {
   res.statusCode = 200;
-  res.json({ games: DB.games, token: req.token, user: req.loggedUser }); //DB.games);
+  res.json(DB.games); //DB.games);
 });
 
 app.get("/games/:id", (req, res) => {
@@ -180,7 +180,8 @@ app.post("/auth", (req, res) => {
         );
         res.status(200);
       } else {
-        res.json({ ERRO: "Credencial inválida" });
+        res.status(401);
+        res.json({ ERRO: "Credencial inválida 1" });
       }
     } else {
       res.status(404);
@@ -193,5 +194,5 @@ app.post("/auth", (req, res) => {
 });
 
 app.listen(3002, () => {
-  console.log("Servidor rodando na porta 3001");
+  console.log("Servidor rodando na porta 3002");
 });
