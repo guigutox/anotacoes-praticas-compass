@@ -43,6 +43,32 @@ class AppointmentService {
             return appointments;
         }
     }
+
+    async GetById(id){
+
+        try{
+            let appo = await Appo.findById(id);
+            return appo;
+
+        }catch(error){
+            console.log(error);
+        }
+
+    }
+
+    async Finish(id){
+
+        try{
+            await Appo.findByIdAndUpdate(id, {finished: true});
+            return true;
+        }catch(error){
+            console.log(error);
+            return false;
+        }
+
+       
+    }
+
 }
 
 

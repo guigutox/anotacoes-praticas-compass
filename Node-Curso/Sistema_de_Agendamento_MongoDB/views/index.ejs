@@ -19,6 +19,10 @@
     let calendar  = new FullCalendar.Calendar(element, {
         initialView: 'dayGridMonth',
         local: 'pt-br',
+        events: 'getCalendar',
+        eventClick: function(info){
+          window.location.href = '/event/'+info.event.id;
+        }
     });
 
     calendar.render();

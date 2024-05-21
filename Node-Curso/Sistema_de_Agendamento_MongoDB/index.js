@@ -13,39 +13,44 @@ app.set("view engine", "ejs");
 
 mongoose.connect("mongodb://localhost:27017/agendamento");
 
-
-
 app.get("/", (req, res) => {
-    res.render("index.ejs");
+  res.render("index.ejs");
 });
 
 app.get("/cadastro", (req, res) => {
-    res.render("create.ejs");
+  res.render("create.ejs");
 });
-
 
 app.post("/create", async (req, res) => {
-
-
-    
-    let status = await appointmentService.Create(
-        req.body.name, req.body.email, req.body.description, req.body.cpf, req.body.date, req.body.time
-    );
-    if(status){
-        res.redirect("/");
-    }else{
-        res.send("Erro, ocorreu uma falha!")
-    }
-
+  let status = await AppointmentService.Create(
+    req.body.name,
+    req.body.email,
+    req.body.description,
+    req.body.cpf,
+    req.body.date,
+    req.body.time
+  );
+  if (status) {
+    res.redirect("/");
+  } else {
+    res.send("Erro, ocorreu uma falha!");
+  }
 });
 
-
-app.get("/getcalendar" , async (req, res) => {
-    var appointments = await AppointmentService.GetAll(false);
-    res.json(appointments);
+app.get("/getcalendar", async (req, res) => {
+  var appointments = await AppointmentService.GetAll(false);
+  res.json(appointments);
 });
 
+app.get("/event/:id", async (req, res) => {
+  let appointment = await AppointmentService.GetById(req.params.id);
+  res.render("event.ejs", { appo: appointment });
+});
 
-app.listen(3000, () => {
-    
-})
+app.post("/finish", async (req, res) => {
+  let id = req.body.id;
+  await AppointmentService.Finish(id);
+  res.redirect("/");
+});
+
+app.listen(3000, () => {});
