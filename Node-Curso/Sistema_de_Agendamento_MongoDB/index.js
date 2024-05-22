@@ -54,17 +54,23 @@ app.post("/finish", async (req, res) => {
 });
 
 app.get("/list", async (req, res) => {
-
   //await AppointmentService.Search("343.434.343-43");
 
   let appos = await AppointmentService.GetAll(true);
-  res.render("list",{appos});
+  res.render("list", { appos });
 });
 
 app.get("/searchresult", async (req, res) => {
-  let appos = await AppointmentService.Search(req.query.search)
-  res.render("list",{appos});
-})
+  let appos = await AppointmentService.Search(req.query.search);
+  res.render("list", { appos });
+});
 
+let polltime = 5000;
+setInterval(async () => {
+ // console.log("polling");
+
+ //await AppointmentService.SendNotification();
+
+}, polltime);
 
 app.listen(3000, () => {});
