@@ -69,6 +69,18 @@ class AppointmentService {
        
     }
 
+
+    //Query onde email é igual ao parametro ou cpf é igual ao parametro
+    async Search(query){
+        try{
+            let appos = await Appo.find().or([{email: query},{cpf: query}])
+            return appos;   
+        }catch(err){
+            console.log(err);
+            return [];
+        }
+    }
+
 }
 
 

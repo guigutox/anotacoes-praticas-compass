@@ -53,4 +53,18 @@ app.post("/finish", async (req, res) => {
   res.redirect("/");
 });
 
+app.get("/list", async (req, res) => {
+
+  //await AppointmentService.Search("343.434.343-43");
+
+  let appos = await AppointmentService.GetAll(true);
+  res.render("list",{appos});
+});
+
+app.get("/searchresult", async (req, res) => {
+  let appos = await AppointmentService.Search(req.query.search)
+  res.render("list",{appos});
+})
+
+
 app.listen(3000, () => {});
