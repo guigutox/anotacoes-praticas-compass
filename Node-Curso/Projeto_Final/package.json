@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/jest": "^29.5.12",
+    "bcrypt": "^5.1.1",
     "express": "^4.19.2",
     "jess": "^1.0.8-alpha.8",
     "jest": "^29.7.0",
