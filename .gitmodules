@@ -1,0 +1,6 @@
+[submodule "SmartContracts-Praticas/Módulo 7- NFT/nft-project/foundry/lib/forge-std"]
+	path = SmartContracts-Praticas/Módulo 7- NFT/nft-project/foundry/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "SmartContracts-Praticas/Módulo 7- NFT/nft-project/foundry/lib/openzeppelin-contracts"]
+	path = SmartContracts-Praticas/Módulo 7- NFT/nft-project/foundry/lib/openzeppelin-contracts
+	url = https://github.com/openzeppelin/openzeppelin-contracts
