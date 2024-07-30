@@ -1,3 +1,7 @@
+## Anotações Módulo 5
+
+
+
 ### Mapping:
 
 Em Solidity, a palavra-chave `mapping` é usada para definir um tipo de dado especial chamado "mapeamento". Um mapeamento é essencialmente uma estrutura de dados que associa chaves a valores, similar a um dicionário ou um mapa em outras linguagens de programação.

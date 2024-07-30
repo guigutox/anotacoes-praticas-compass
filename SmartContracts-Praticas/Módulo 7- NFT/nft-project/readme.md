@@ -1,3 +1,5 @@
+## Anotações Módulo 7
+
 ## INICIANDO PROJETO
 
 COMANDOS:
@@ -8,7 +10,7 @@ COMANDOS:
 
 MAIS DETALHES:
 
- https://ethereum-blockchain-developer.com/2022-06-nft-truffle-hardhat-foundry/03-truffle-setup/ 
+https://ethereum-blockchain-developer.com/2022-06-nft-truffle-hardhat-foundry/03-truffle-setup/
 
 ---
 
@@ -72,7 +74,7 @@ truffle migrate --network ganache
     }
 ```
 
-MAIS DETALHES:  
+MAIS DETALHES:
 
 https://ethereum-blockchain-developer.com/2022-06-nft-truffle-hardhat-foundry/04-truffle-migrations/
 
@@ -91,13 +93,13 @@ web3.eth.getAccounts();
 Após isso crie uma nova instancia, exemplo:
 
 ```jsx
-const spacebear = await Spacebear.deployed()
+const spacebear = await Spacebear.deployed();
 ```
 
 Teste se deu certo usando tentando verificar um campo do objeto, exemplo:
 
 ```jsx
-spacebear.name()
+spacebear.name();
 ```
 
 Por fim, instancie um novo objeto usando as contas, exemplo:
@@ -144,8 +146,8 @@ https://ethereum-blockchain-developer.com/2022-06-nft-truffle-hardhat-foundry/08
 - **Eventos**: Inclui eventos para `Transfer` e `Approval`, usados para registrar transferências de tokens e permissões.
 - **Adoção**: Extremamente popular e amplamente adotado em várias plataformas e exchanges.
 - **Limitações**:
-    - **Problemas de segurança**: Vulnerável a erros como a função `approve` e a possível race condition.
-    - **Funcionalidades limitadas**: Não suporta funções avançadas como hooks de pré/pós-transação.
+  - **Problemas de segurança**: Vulnerável a erros como a função `approve` e a possível race condition.
+  - **Funcionalidades limitadas**: Não suporta funções avançadas como hooks de pré/pós-transação.
 
 ### ERC777
 
@@ -168,8 +170,8 @@ https://ethereum-blockchain-developer.com/2022-06-nft-truffle-hardhat-foundry/08
 - **Eventos**: Inclui eventos para transferências e aprovações.
 - **Adoção**: Amplamente utilizado em casos de uso de NFTs, como arte digital, colecionáveis e imóveis virtuais.
 - **Limitações**:
-    - **Eficiência**: Não é eficiente para transferir múltiplos tokens em uma única transação.
-    - **Complexidade**: Cada token único requer uma entrada separada.
+  - **Eficiência**: Não é eficiente para transferir múltiplos tokens em uma única transação.
+  - **Complexidade**: Cada token único requer uma entrada separada.
 
 ### ERC1155
 

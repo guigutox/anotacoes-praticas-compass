@@ -1,3 +1,5 @@
+## Anotações Módulo 6
+
 ## WEB 3.js
 
 Web3.js é uma biblioteca JavaScript que permite interagir com um nó blockchain por meio de sua interface RPC. Pode ser uma interface HTTP RESTful ou WebSockets.

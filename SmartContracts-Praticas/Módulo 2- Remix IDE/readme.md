@@ -1,3 +1,5 @@
+## Anotações Módulo 2
+
 - Um contrato precisa de uma licença, identificador de licença que seja feito em SPDX.
 - Necessário na primeira linha dizer em que linguagem e versão o contrato está sendo escrito.
 
